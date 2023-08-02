@@ -28,8 +28,21 @@
 import TheHeader from './components/layout/TheHeader';
 export default {
   components: { TheHeader },
+  computed: {
+    didAutoLogout() {
+      return this.$store.getters.didAutoLogout;
+    },
+  },
   created() {
     this.$store.dispatch('autoLogin');
+  },
+  watch: {
+    didAutoLogout(curValue, oldValue) {
+      if (curValue && curValue !== oldValue) {
+        console.log(true);
+        this.$router.replace('/coaches');
+      }
+    },
   },
 };
 </script>
