@@ -3,7 +3,6 @@
   <!-- How to add route transitions. Also make sure that the components that will be viewed have only one root component. For this project all the components that will be viewed are in the pages folder. 
   So all those components should look like - 
   <template>
-  I'm writing some code to add a change to see how revert works and if I can split my MR
   <div>
     ....
   </div>
